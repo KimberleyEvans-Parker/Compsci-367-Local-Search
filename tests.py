@@ -296,3 +296,10 @@ def generate_answers(hill_climbing_method, problems=None):
         result = hill_climbing_method(problem, *args)
         answers[key] = result
     return answers
+
+
+# test_all()
+# action_and_result_examples()
+test_action_and_result()
+test_hill_climbing_instrumented()
+test_hill_climbing_sideways()

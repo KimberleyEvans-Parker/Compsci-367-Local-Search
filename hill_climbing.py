@@ -44,7 +44,12 @@ class NQueensProblem:
         ######################
         ### Your code here ###
         ######################
-        return []
+        actions = []
+        for i in range(len(state)):
+            for j in range(len(state)):
+                if state[i] != j:
+                    actions.append([i, j])
+        return actions
 
     def result(self, state: tuple, action) -> tuple:
         """Return the result of applying `action` to `state`.
@@ -55,7 +60,10 @@ class NQueensProblem:
         ######################
         ### Your code here ###
         ######################
-        return ()
+        neighbour_state = list(state)
+        i, j = action
+        neighbour_state[i] = j
+        return tuple(neighbour_state)
 
     def goal_test(self, state):
         """Check if all columns filled, no conflicts."""
@@ -177,10 +185,26 @@ def hill_climbing_instrumented(problem):
     ######################
     ### Your code here ###
     ######################
+    expanded = 0
+    solved = False
+    current = Node(problem=problem, state=problem.initial)
+    while True:
+        if current.goal_test():
+            solved = True
+            break
+        neighbours = current.expand()
+        expanded += 1
+        if not neighbours:
+            break
+        neighbour = current.best_of(neighbours)
+        if neighbour.value() <= current.value():
+            break
+        current = neighbour
+
     return {
-        "expanded": int,
-        "solved": bool,
-        "best_state": tuple,
+        "expanded": expanded,
+        "solved": solved,
+        "best_state": current.state,
     }
 
 
@@ -197,11 +221,32 @@ def hill_climbing_sideways(problem, max_sideways_moves):
     ######################
     ### Your code here ###
     ######################
+    expanded = 0
+    sideways_moves = 0
+    solved = False
+    current = Node(problem=problem, state=problem.initial)
+    while True:
+        if current.goal_test():
+            solved = True
+            break
+        neighbours = current.expand()
+        expanded += 1
+        if not neighbours:
+            break
+        neighbour = current.best_of(neighbours)
+        if neighbour.value() < current.value():
+            break
+        if neighbour.value() == current.value():
+            sideways_moves += 1
+            if sideways_moves >= max_sideways_moves:
+                break
+        current = neighbour
+
     return {
-        "expanded": int,
-        "solved": bool,
-        "best_state": tuple,
-        "sideways_moves": int,
+        "expanded": expanded,
+        "solved": solved,
+        "best_state": current.state,
+        "sideways_moves": sideways_moves,
     }
 
 
