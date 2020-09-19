@@ -237,9 +237,10 @@ def hill_climbing_sideways(problem, max_sideways_moves):
         if neighbour.value() < current.value():
             break
         if neighbour.value() == current.value():
-            sideways_moves += 1
             if sideways_moves >= max_sideways_moves:
                 break
+            else:
+                sideways_moves += 1
         current = neighbour
 
     return {
