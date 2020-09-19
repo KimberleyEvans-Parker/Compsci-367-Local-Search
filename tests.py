@@ -298,8 +298,8 @@ def generate_answers(hill_climbing_method, problems=None):
     return answers
 
 
-# test_all()
-# action_and_result_examples()
-test_action_and_result()
-test_hill_climbing_instrumented()
-test_hill_climbing_sideways()
+test_all()
+# test_action_and_result()
+# test_hill_climbing_instrumented()
+# test_hill_climbing_sideways()
+# test_hill_climbing_random_restart()

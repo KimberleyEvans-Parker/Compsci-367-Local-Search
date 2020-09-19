@@ -266,9 +266,33 @@ def hill_climbing_random_restart(problem, max_restarts):
     ######################
     ### Your code here ###
     ######################
+    expanded = 0
+    sideways_moves = 0
+    restarts = 0
+    solved = False
+    current = Node(problem=problem, state=problem.initial)
+    while True:
+        if current.goal_test():
+            solved = True
+            break
+        neighbours = current.expand()
+        expanded += 1
+        if not neighbours:
+            break
+        neighbour = current.best_of(neighbours)
+        if neighbour.value() < current.value():
+            break
+        if neighbour.value() == current.value():
+            if restarts >= max_restarts:
+                break
+            restarts += 1
+            new_state = problem.random_state()
+            current = Node(problem=problem, state=new_state)
+        else:
+            current = neighbour
     return {
-        "expanded": int,
-        "solved": bool,
-        "best_state": tuple,
-        "restarts": int,
+        "expanded": expanded,
+        "solved": solved,
+        "best_state": current.state,
+        "restarts": restarts,
     }
