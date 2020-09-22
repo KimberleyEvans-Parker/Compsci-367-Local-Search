@@ -35,15 +35,17 @@ def average_std(problem, function, number):
     expanded_standard_deviation = numpy.std(num_exanded_nodes)
     expanded_average = numpy.average(num_exanded_nodes)
     solving_probability = solved / number
-    print("expanded: ", expanded_average, "+-", expanded_standard_deviation)
-    print("time: ", time_average, "+-", time_standard_deviation)
+    print("expanded: {0:.5f} +- {1:.5f}".format(expanded_average,
+                                                expanded_standard_deviation))
+    print("time: {0:.5f} +- {1:.5f}".format(time_average,
+                                            time_standard_deviation))
     print("solving_probability: ", solving_probability)
 
 
-NUM_TRIALS = 20
+NUM_TRIALS = 1000
 NUM_QUEENS = 15
 
-for i in range(NUM_QUEENS, NUM_QUEENS + 4):
+for i in range(NUM_QUEENS, NUM_QUEENS + 3):
     print("N:", i)
     problem = NQueensProblem(N=i)
     average_std(problem, hill_climbing_instrumented, NUM_TRIALS)
