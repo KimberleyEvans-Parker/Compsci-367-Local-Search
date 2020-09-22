@@ -15,19 +15,38 @@ def time_function(problem, function):
     start = time.time()
     results = function(problem2)
     finish = time.time()
-    results["time_to_solve"] = finish - start
+    results["time"] = finish - start
     return results
 
 
-problem = NQueensProblem(N=10)
-problem2 = NQueensProblem(state=problem.random_state())
-results = hill_climbing_instrumented(problem2)
+def average_std(problem, function, number):
+    print("-" * 10 + str(function).upper().split(" ")[1] + "-" * 10)
+    times = []
+    num_exanded_nodes = []
+    solved = 0
+    for i in range(number):
+        results = time_function(problem, function)
+        times.append(results["time"])
+        num_exanded_nodes.append(results["expanded"])
+        if results["solved"]:
+            solved += 1
+    time_standard_deviation = numpy.std(times)
+    time_average = numpy.average(times)
+    expanded_standard_deviation = numpy.std(num_exanded_nodes)
+    expanded_average = numpy.average(num_exanded_nodes)
+    solving_probability = solved / number
+    print("expanded: ", expanded_average, "+-", expanded_standard_deviation)
+    print("time: ", time_average, "+-", time_standard_deviation)
+    print("solving_probability: ", solving_probability)
 
-print("expanded: ", results["expanded"])
-print("solved: ", results["solved"])
-# print("expanded: ", results["expanded"])
 
-# print(numpy.std([10, 12, 23, 23, 16, 23, 21, 16]))
-# print(numpy.average([10, 2, 38, 23, 38, 23, 21]))
+NUM_TRIALS = 20
+NUM_QUEENS = 15
 
-print(time_function(problem, hill_climbing_instrumented))
+for i in range(NUM_QUEENS, NUM_QUEENS + 4):
+    print("N:", i)
+    problem = NQueensProblem(N=i)
+    average_std(problem, hill_climbing_instrumented, NUM_TRIALS)
+    average_std(problem, hill_climbing_sideways, NUM_TRIALS)
+    average_std(problem, hill_climbing_random_restart, NUM_TRIALS)
+    print()
