@@ -208,7 +208,7 @@ def hill_climbing_instrumented(problem):
     }
 
 
-def hill_climbing_sideways(problem, max_sideways_moves):
+def hill_climbing_sideways(problem, max_sideways_moves=10):
     """
     When the search would terminate because the best neighbour doesn't
     have a higher value than the current state, continue the search if 
@@ -250,7 +250,7 @@ def hill_climbing_sideways(problem, max_sideways_moves):
     }
 
 
-def hill_climbing_random_restart(problem, max_restarts):
+def hill_climbing_random_restart(problem, max_restarts=10):
     """
     When the search would terminate because the best neighbour doesn't
     have a higher value than the current state, generate a new state to
