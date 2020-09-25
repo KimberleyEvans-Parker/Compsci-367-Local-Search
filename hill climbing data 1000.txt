@@ -1,0 +1,136 @@
+N: 1
+expanded: 0.00000 +- 0.00000
+time: 0.00000 +- 0.00004
+solving_probability: 1.0
+expanded: 0.00000 +- 0.00000
+time: 0.00000 +- 0.00005
+solving_probability: 1.0
+expanded: 0.00000 +- 0.00000
+time: 0.00000 +- 0.00001
+solving_probability: 1.0
+
+N: 2
+expanded: 1.00000 +- 0.00000
+time: 0.00002 +- 0.00015
+solving_probability: 0.0
+expanded: 11.00000 +- 0.00000
+time: 0.00022 +- 0.00041
+solving_probability: 0.0
+expanded: 11.00000 +- 0.00000
+time: 0.00024 +- 0.00043
+solving_probability: 0.0
+
+N: 3
+expanded: 1.86400 +- 0.57053
+time: 0.00010 +- 0.00031
+solving_probability: 0.0
+expanded: 11.89800 +- 0.55641
+time: 0.00072 +- 0.00048
+solving_probability: 0.0
+expanded: 20.71200 +- 1.89554
+time: 0.00132 +- 0.00051
+solving_probability: 0.0
+
+N: 4
+expanded: 2.14100 +- 0.70222
+time: 0.00030 +- 0.00046
+solving_probability: 0.416
+expanded: 2.88200 +- 1.06399
+time: 0.00073 +- 0.00058
+solving_probability: 1.0
+expanded: 5.30800 +- 4.55863
+time: 0.00156 +- 0.00151
+solving_probability: 0.992
+
+N: 5
+expanded: 2.41200 +- 0.76175
+time: 0.00082 +- 0.00057
+solving_probability: 0.74
+expanded: 2.83100 +- 1.02978
+time: 0.00094 +- 0.00056
+solving_probability: 1.0
+expanded: 3.43300 +- 2.03064
+time: 0.00188 +- 0.00130
+solving_probability: 1.0
+
+N: 6
+expanded: 3.18900 +- 0.80826
+time: 0.00221 +- 0.00107
+solving_probability: 0.132
+expanded: 11.73800 +- 3.70315
+time: 0.00796 +- 0.00333
+solving_probability: 0.175
+expanded: 20.99100 +- 12.64899
+time: 0.01585 +- 0.01103
+solving_probability: 0.706
+
+N: 7
+expanded: 3.55600 +- 0.90822
+time: 0.00403 +- 0.00131
+solving_probability: 0.287
+expanded: 8.38000 +- 4.66279
+time: 0.00972 +- 0.00561
+solving_probability: 0.519
+expanded: 11.30100 +- 8.61025
+time: 0.01306 +- 0.00990
+solving_probability: 0.859
+
+N: 8
+expanded: 4.06100 +- 0.92697
+time: 0.00762 +- 0.00205
+solving_probability: 0.145
+expanded: 10.92500 +- 4.56721
+time: 0.02701 +- 0.02249
+solving_probability: 0.385
+expanded: 22.77900 +- 15.04833
+time: 0.04276 +- 0.02885
+solving_probability: 0.745
+
+N: 9
+expanded: 4.53100 +- 1.01343
+time: 0.01304 +- 0.00405
+solving_probability: 0.158
+expanded: 11.08600 +- 4.53681
+time: 0.03237 +- 0.01422
+solving_probability: 0.432
+expanded: 24.90300 +- 16.57219
+time: 0.07424 +- 0.04984
+solving_probability: 0.779
+
+N: 10
+expanded: 5.00600 +- 0.99195
+time: 0.02291 +- 0.00525
+solving_probability: 0.082
+expanded: 13.20400 +- 3.87071
+time: 0.06246 +- 0.01987
+solving_probability: 0.258
+expanded: 37.68000 +- 18.69598
+time: 0.17765 +- 0.09080
+solving_probability: 0.538
+
+N: 11
+expanded: 5.42200 +- 1.09541
+time: 0.04030 +- 0.00968
+solving_probability: 0.051
+expanded: 13.92100 +- 3.72005
+time: 0.10480 +- 0.02918
+solving_probability: 0.247
+expanded: 45.88000 +- 19.08972
+time: 0.33340 +- 0.13990
+solving_probability: 0.421
+
+N: 12
+expanded: 5.87000 +- 1.15547
+time: 0.05808 +- 0.01320
+solving_probability: 0.056
+expanded: 14.47500 +- 3.66106
+time: 0.15120 +- 0.04186
+solving_probability: 0.253
+expanded: 49.55400 +- 20.22684
+time: 0.49476 +- 0.20478
+solving_probability: 0.414
+
+N: 13
+expanded: 6.36000 +- 1.18592
+time: 0.08073 +- 0.01584
+solving_probability: 0.045
